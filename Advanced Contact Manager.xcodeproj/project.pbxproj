@@ -19,6 +19,8 @@
 		1BC0D3FC186284B40052F2B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0D3FA186284B40052F2B1 /* InfoPlist.strings */; };
 		1BC0D3FE186284B40052F2B1 /* Advanced_Contact_ManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0D3FD186284B40052F2B1 /* Advanced_Contact_ManagerTests.m */; };
 		1BC0D409186292400052F2B1 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0D408186292400052F2B1 /* AppController.m */; };
+		1BC0D41C186292A90052F2B1 /* EvernoteSDK-Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC0D415186292860052F2B1 /* EvernoteSDK-Mac.framework */; };
+		1BC0D41E186292CC0052F2B1 /* EvernoteSDK-Mac.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1BC0D415186292860052F2B1 /* EvernoteSDK-Mac.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +31,55 @@
 			remoteGlobalIDString = 1BC0D3CF186284B40052F2B1;
 			remoteInfo = "Advanced Contact Manager";
 		};
+		1BC0D412186292860052F2B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BC0D40A186292850052F2B1 /* EvernoteSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0BB3D1AD1524ED96001C4534;
+			remoteInfo = EvernoteSDK;
+		};
+		1BC0D414186292860052F2B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BC0D40A186292850052F2B1 /* EvernoteSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 43741864170ADB2400D2BE51;
+			remoteInfo = "EvernoteSDK-Mac";
+		};
+		1BC0D416186292860052F2B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BC0D40A186292850052F2B1 /* EvernoteSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0BB3D26E1524EF37001C4534;
+			remoteInfo = "SampleApp-iOS";
+		};
+		1BC0D418186292860052F2B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BC0D40A186292850052F2B1 /* EvernoteSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 437418AC170ADCD600D2BE51;
+			remoteInfo = "SampleApp-Mac";
+		};
+		1BC0D41A186292860052F2B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1BC0D40A186292850052F2B1 /* EvernoteSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0BDBBC431550A11A003E6681;
+			remoteInfo = UnitTests;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1BC0D41D186292B40052F2B1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1BC0D41E186292CC0052F2B1 /* EvernoteSDK-Mac.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1BC0D3D0186284B40052F2B1 /* Advanced Contact Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Advanced Contact Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +103,7 @@
 		1BC0D3FD186284B40052F2B1 /* Advanced_Contact_ManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Advanced_Contact_ManagerTests.m; sourceTree = "<group>"; };
 		1BC0D407186292400052F2B1 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		1BC0D408186292400052F2B1 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		1BC0D40A186292850052F2B1 /* EvernoteSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EvernoteSDK.xcodeproj; path = "../evernote-sdk-mac/EvernoteSDK.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BC0D41C186292A90052F2B1 /* EvernoteSDK-Mac.framework in Frameworks */,
 				1BC0D3D4186284B40052F2B1 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,6 +131,7 @@
 		1BC0D3C7186284B40052F2B1 = {
 			isa = PBXGroup;
 			children = (
+				1BC0D40A186292850052F2B1 /* EvernoteSDK.xcodeproj */,
 				1BC0D3D9186284B40052F2B1 /* Advanced Contact Manager */,
 				1BC0D3F7186284B40052F2B1 /* Advanced Contact ManagerTests */,
 				1BC0D3D2186284B40052F2B1 /* Frameworks */,
@@ -159,6 +212,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1BC0D40B186292850052F2B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1BC0D413186292860052F2B1 /* libEvernoteSDK.a */,
+				1BC0D415186292860052F2B1 /* EvernoteSDK-Mac.framework */,
+				1BC0D417186292860052F2B1 /* SampleApp-iOS.app */,
+				1BC0D419186292860052F2B1 /* SampleApp-Mac.app */,
+				1BC0D41B186292860052F2B1 /* UnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,6 +234,7 @@
 				1BC0D3CC186284B40052F2B1 /* Sources */,
 				1BC0D3CD186284B40052F2B1 /* Frameworks */,
 				1BC0D3CE186284B40052F2B1 /* Resources */,
+				1BC0D41D186292B40052F2B1 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -223,6 +289,12 @@
 			mainGroup = 1BC0D3C7186284B40052F2B1;
 			productRefGroup = 1BC0D3D1186284B40052F2B1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1BC0D40B186292850052F2B1 /* Products */;
+					ProjectRef = 1BC0D40A186292850052F2B1 /* EvernoteSDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1BC0D3CF186284B40052F2B1 /* Advanced Contact Manager */,
@@ -230,6 +302,44 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1BC0D413186292860052F2B1 /* libEvernoteSDK.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libEvernoteSDK.a;
+			remoteRef = 1BC0D412186292860052F2B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1BC0D415186292860052F2B1 /* EvernoteSDK-Mac.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = "EvernoteSDK-Mac.framework";
+			remoteRef = 1BC0D414186292860052F2B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1BC0D417186292860052F2B1 /* SampleApp-iOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "SampleApp-iOS.app";
+			remoteRef = 1BC0D416186292860052F2B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1BC0D419186292860052F2B1 /* SampleApp-Mac.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "SampleApp-Mac.app";
+			remoteRef = 1BC0D418186292860052F2B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1BC0D41B186292860052F2B1 /* UnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTests.octest;
+			remoteRef = 1BC0D41A186292860052F2B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1BC0D3CE186284B40052F2B1 /* Resources */ = {
