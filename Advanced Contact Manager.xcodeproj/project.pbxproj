@@ -18,6 +18,7 @@
 		1BC0D3F4186284B40052F2B1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC0D3D3186284B40052F2B1 /* Cocoa.framework */; };
 		1BC0D3FC186284B40052F2B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0D3FA186284B40052F2B1 /* InfoPlist.strings */; };
 		1BC0D3FE186284B40052F2B1 /* Advanced_Contact_ManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0D3FD186284B40052F2B1 /* Advanced_Contact_ManagerTests.m */; };
+		1BC0D409186292400052F2B1 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0D408186292400052F2B1 /* AppController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		1BC0D3F9186284B40052F2B1 /* Advanced Contact ManagerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Advanced Contact ManagerTests-Info.plist"; sourceTree = "<group>"; };
 		1BC0D3FB186284B40052F2B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1BC0D3FD186284B40052F2B1 /* Advanced_Contact_ManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Advanced_Contact_ManagerTests.m; sourceTree = "<group>"; };
+		1BC0D407186292400052F2B1 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		1BC0D408186292400052F2B1 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 		1BC0D3D9186284B40052F2B1 /* Advanced Contact Manager */ = {
 			isa = PBXGroup;
 			children = (
+				1BC0D407186292400052F2B1 /* AppController.h */,
+				1BC0D408186292400052F2B1 /* AppController.m */,
 				1BC0D3E5186284B40052F2B1 /* TCCAppDelegate.h */,
 				1BC0D3E6186284B40052F2B1 /* TCCAppDelegate.m */,
 				1BC0D3E8186284B40052F2B1 /* MainMenu.xib */,
@@ -254,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BC0D3E0186284B40052F2B1 /* main.m in Sources */,
+				1BC0D409186292400052F2B1 /* AppController.m in Sources */,
 				1BC0D3E7186284B40052F2B1 /* TCCAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
