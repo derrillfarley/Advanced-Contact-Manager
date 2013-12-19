@@ -10,4 +10,16 @@
 
 @implementation AppController
 
+-(void) awakeFromNib {
+    NSDate *currentTime = [NSDate date];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"HH:mm:ss"];
+    
+    NSString *stringFromDate = [formatter stringFromDate:currentTime];
+    
+    //    [self updateTimerLabel: stringFromDate ];
+    NSLog(@"awakeFromNib: %@", stringFromDate);
+    
+}
+
 @end
