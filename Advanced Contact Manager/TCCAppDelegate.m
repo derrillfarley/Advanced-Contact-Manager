@@ -16,12 +16,10 @@
 @synthesize window = _window;
 @synthesize content;
 @synthesize popoverWindow;
-@synthesize contactsToolbarButton;
+//@synthesize contactsToolbarButton = _contactsToolbarButton;
 @synthesize contactsButtonPopover;
 
-
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-
     // Override point for customization after application launch.
     
     // Initial development is done on the sandbox service
@@ -39,6 +37,9 @@
     [EvernoteSession setSharedSessionHost:EVERNOTE_HOST
                               consumerKey:CONSUMER_KEY
                            consumerSecret:CONSUMER_SECRET];
+    
+    NSLog(@"applicationDidFinishLaunching: \n\tEvernote SharedSession\n\t\tHost: %@\n\t\tConsumer Key: %@\n\t\tConsumer Secret:%@",
+          EVERNOTE_HOST, CONSUMER_KEY, CONSUMER_SECRET);
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)theApplication {
@@ -78,14 +79,12 @@
     }];
 }
 
-- (IBAction)contactsToolbarItemPressed:(id)sender
-{
-    NSLog(@"showing contacts popover");
+- (IBAction)contactsToolbarItemPressed:(id)sender {
+    NSLog(@"Showing contacts popover");
     
-    NSButton *button = (NSButton *)[contactsToolbarButton view];
-
+    NSButton *button = (NSButton *)[self.contactsToolbarButton view];
+    NSLog(@"Showing contacts popover with view: %@", button);
     [self.contactsButtonPopover showPopup:button];
 }
-
 
 @end

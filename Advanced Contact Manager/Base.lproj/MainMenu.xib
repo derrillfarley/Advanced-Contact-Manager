@@ -679,34 +679,10 @@
         <customObject id="494" customClass="TCCAppDelegate">
             <connections>
                 <outlet property="contactsToolbarButton" destination="433-i3-uNV" id="qmB-dP-V1j"/>
+                <outlet property="window" destination="371" id="RQM-EJ-Jqp"/>
             </connections>
         </customObject>
         <customObject id="420" customClass="NSFontManager"/>
-        <viewController id="hqw-U4-lu9" userLabel="Popover View Controller">
-            <connections>
-                <outlet property="view" destination="MS9-1A-5ht" id="muw-CI-0Cz"/>
-            </connections>
-        </viewController>
-        <popover id="SlJ-h0-uso">
-            <connections>
-                <outlet property="contentViewController" destination="hqw-U4-lu9" id="Wxc-ZB-LCL"/>
-            </connections>
-        </popover>
-        <customView id="MS9-1A-5ht">
-            <rect key="frame" x="0.0" y="0.0" width="163" height="96"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s1F-Bn-RBV">
-                    <rect key="frame" x="32" y="12" width="95" height="64"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Popover" id="NtW-2D-PXE">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
-            </subviews>
-        </customView>
     </objects>
     <resources>
         <image name="NSApplicationIcon" width="128" height="128"/>

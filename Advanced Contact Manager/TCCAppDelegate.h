@@ -11,10 +11,11 @@
 
 @interface TCCAppDelegate : NSObject <NSApplicationDelegate>
 
+@property (assign) IBOutlet NSToolbarItem *contactsToolbarButton;
 @property (assign) ContactsPopover *contactsButtonPopover;
 @property (assign) IBOutlet NSWindow *window;
 @property (strong, nonatomic) NSArray *content;
-@property (assign) IBOutlet NSToolbarItem *contactsToolbarButton;
+//@property (assign) IBOutlet NSToolbarItem *contactsToolbarButton;
 @property (assign) IBOutlet NSWindow *popoverWindow;
 
 - (IBAction)contactsToolbarItemPressed:(id)sender;
