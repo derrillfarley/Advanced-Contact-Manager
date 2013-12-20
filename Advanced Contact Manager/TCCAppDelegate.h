@@ -7,6 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <AddressBook/AddressBook.h>
+
 #import "ContactsPopover.h"
 
 @interface TCCAppDelegate : NSObject <NSApplicationDelegate> {
