@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ContactsPopover : NSViewController <NSPopoverDelegate> {
-    NSPopover *popover;
-}
+@interface ContactsPopover : NSViewController <NSPopoverDelegate>
 
 @property NSPopover *popover;
 

@@ -10,8 +10,9 @@
 
 @implementation ContactsPopover
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+@synthesize popover;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Initialization code here.
@@ -36,6 +37,11 @@
     [self _makePopoverIfNeeded];
     
     [popover showRelativeToRect:[positioningView bounds] ofView:positioningView preferredEdge:NSMinYEdge];
+}
+
+- (IBAction)dismissButtonPressed:(id)sender {
+    NSLog(@"Dismissing contacts popover");
+    [popover close];
 }
 
 @end

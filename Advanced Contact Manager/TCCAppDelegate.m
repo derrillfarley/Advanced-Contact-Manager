@@ -15,9 +15,9 @@
 
 @synthesize window = _window;
 @synthesize content;
-@synthesize contactsButtonPopover;
 @synthesize popoverWindow;
 @synthesize contactsToolbarButton;
+@synthesize contactsButtonPopover;
 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -83,12 +83,9 @@
     NSLog(@"showing contacts popover");
     
     NSButton *button = (NSButton *)[contactsToolbarButton view];
-    [self showContactsPopup:button];
+
+    [self.contactsButtonPopover showPopup:button];
 }
 
-- (void)showContactsPopup:(NSView *)positioningView {
-    [contactsButtonPopover showRelativeToRect:[positioningView bounds] ofView:positioningView preferredEdge:NSMinYEdge];
-    
-}
 
 @end

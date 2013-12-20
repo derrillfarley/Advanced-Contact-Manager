@@ -7,10 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ContactsPopover.h"
 
 @interface TCCAppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) NSPopover *contactsButtonPopover;
+@property (assign) ContactsPopover *contactsButtonPopover;
 @property (assign) IBOutlet NSWindow *window;
 @property (strong, nonatomic) NSArray *content;
 @property (assign) IBOutlet NSToolbarItem *contactsToolbarButton;
@@ -18,5 +19,4 @@
 
 - (IBAction)contactsToolbarItemPressed:(id)sender;
 
-- (void)showContactsPopup:(NSView *)positioningView;
 @end
