@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B99BAA118646D6600FA6981 /* TCCPeoplePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B99BAA018646D6600FA6981 /* TCCPeoplePickerController.m */; };
+		1B99BAA31864737A00FA6981 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B99BAA21864737A00FA6981 /* AddressBook.framework */; };
 		1BC0D3D4186284B40052F2B1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC0D3D3186284B40052F2B1 /* Cocoa.framework */; };
 		1BC0D3DE186284B40052F2B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0D3DC186284B40052F2B1 /* InfoPlist.strings */; };
 		1BC0D3E0186284B40052F2B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0D3DF186284B40052F2B1 /* main.m */; };
@@ -83,6 +85,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1B99BA9F18646D6600FA6981 /* TCCPeoplePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCCPeoplePickerController.h; sourceTree = "<group>"; };
+		1B99BAA018646D6600FA6981 /* TCCPeoplePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCCPeoplePickerController.m; sourceTree = "<group>"; };
+		1B99BAA21864737A00FA6981 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		1BC0D3D0186284B40052F2B1 /* Advanced Contact Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Advanced Contact Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC0D3D3186284B40052F2B1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1BC0D3D6186284B40052F2B1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -113,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B99BAA31864737A00FA6981 /* AddressBook.framework in Frameworks */,
 				1BC0D41C186292A90052F2B1 /* EvernoteSDK-Mac.framework in Frameworks */,
 				1BC0D3D4186284B40052F2B1 /* Cocoa.framework in Frameworks */,
 			);
@@ -153,6 +159,7 @@
 		1BC0D3D2186284B40052F2B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1B99BAA21864737A00FA6981 /* AddressBook.framework */,
 				1BC0D3D3186284B40052F2B1 /* Cocoa.framework */,
 				1BC0D3F2186284B40052F2B1 /* XCTest.framework */,
 				1BC0D3D5186284B40052F2B1 /* Other Frameworks */,
@@ -228,6 +235,8 @@
 		1BDC29491864146B002C6758 /* ContactsPopover */ = {
 			isa = PBXGroup;
 			children = (
+				1B99BA9F18646D6600FA6981 /* TCCPeoplePickerController.h */,
+				1B99BAA018646D6600FA6981 /* TCCPeoplePickerController.m */,
 				1BDC294418640F96002C6758 /* ContactsPopover.h */,
 				1BDC294518640F96002C6758 /* ContactsPopover.m */,
 				1BDC29471864114B002C6758 /* ContactsPopover.xib */,
@@ -391,6 +400,7 @@
 				1BC0D3E0186284B40052F2B1 /* main.m in Sources */,
 				1BDC294618640F96002C6758 /* ContactsPopover.m in Sources */,
 				1BC0D3E7186284B40052F2B1 /* TCCAppDelegate.m in Sources */,
+				1B99BAA118646D6600FA6981 /* TCCPeoplePickerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
