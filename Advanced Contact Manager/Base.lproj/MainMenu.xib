@@ -651,7 +651,7 @@
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="778"/>
             <view key="contentView" id="372">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -663,14 +663,29 @@
                     <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="yHH-3S-Mmz"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="uUP-Ag-9Gp"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="AfL-Mu-Y9r"/>
-                    <toolbarItem implicitItemIdentifier="2624C635-87EF-441E-8D9E-F47C01D0E7AF" label="Contacts" paletteLabel="Contacts" tag="-1" image="NSApplicationIcon" id="433-i3-uNV">
+                    <toolbarItem implicitItemIdentifier="2624C635-87EF-441E-8D9E-F47C01D0E7AF" label="Contacts" paletteLabel="Contacts" tag="-1" image="contacts-icon32" id="433-i3-uNV"/>
+                    <toolbarItem implicitItemIdentifier="C615413B-48D9-4788-B53F-EF4A1E8672D5" label="Show Contacts" paletteLabel="Show Contacts" image="contacts-icon32" id="vQl-tH-88e">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="68" height="32"/>
+                        <size key="maxSize" width="82" height="43"/>
+                        <button key="view" id="5Am-VM-v9O">
+                            <rect key="frame" x="9" y="14" width="68" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="contacts-icon32" imagePosition="overlaps" alignment="center" alternateImage="contacts-icon32" imageScaling="proportionallyDown" inset="2" id="yZa-gI-WqD">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="contactsToolbarItemPressed:" target="494" id="S08-cU-Vp7"/>
+                            </connections>
+                        </button>
                         <connections>
-                            <action selector="contactsToolbarItemPressed:" target="494" id="6e4-Vb-PWb"/>
+                            <action selector="contactsToolbarItemPressed:" target="494" id="X35-gd-boK"/>
                         </connections>
                     </toolbarItem>
                 </allowedToolbarItems>
                 <defaultToolbarItems>
-                    <toolbarItem reference="433-i3-uNV"/>
+                    <toolbarItem reference="vQl-tH-88e"/>
                     <toolbarItem reference="AfL-Mu-Y9r"/>
                     <toolbarItem reference="yHH-3S-Mmz"/>
                 </defaultToolbarItems>
@@ -678,13 +693,13 @@
         </window>
         <customObject id="494" customClass="TCCAppDelegate">
             <connections>
-                <outlet property="contactsToolbarButton" destination="433-i3-uNV" id="qmB-dP-V1j"/>
-                <outlet property="window" destination="371" id="RQM-EJ-Jqp"/>
+                <outlet property="contactsToolbarButton" destination="vQl-tH-88e" id="8fk-1D-5O4"/>
+                <outlet property="window" destination="371" id="V57-RC-Mnb"/>
             </connections>
         </customObject>
         <customObject id="420" customClass="NSFontManager"/>
     </objects>
     <resources>
-        <image name="NSApplicationIcon" width="128" height="128"/>
+        <image name="contacts-icon32" width="32" height="32"/>
     </resources>
 </document>

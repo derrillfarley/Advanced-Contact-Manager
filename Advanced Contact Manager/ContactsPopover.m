@@ -37,6 +37,7 @@
     [self _makePopoverIfNeeded];
     
     [popover showRelativeToRect:[positioningView bounds] ofView:positioningView preferredEdge:NSMinYEdge];
+    NSLog(@"ContactsPopover::showPopup()");
 }
 
 - (IBAction)dismissButtonPressed:(id)sender {

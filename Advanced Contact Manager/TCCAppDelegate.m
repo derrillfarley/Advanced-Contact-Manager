@@ -10,26 +10,22 @@
 
 #import <EvernoteSDK-Mac/EvernoteSDK.h>
 
-
 @implementation TCCAppDelegate
 
 @synthesize window = _window;
 @synthesize content;
-@synthesize popoverWindow;
-//@synthesize contactsToolbarButton = _contactsToolbarButton;
-@synthesize contactsButtonPopover;
+@synthesize contactsToolbarButton = _contactsToolbarButton;
+//@synthesize contactsButtonPopover;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Override point for customization after application launch.
     
-    // Initial development is done on the sandbox service
-    // Change this to BootstrapServerBaseURLStringUS to use the production Evernote service
-    // Change this to BootstrapServerBaseURLStringCN to use the Yinxiang Biji production service
-    // BootstrapServerBaseURLStringSandbox does not support the  Yinxiang Biji service
+    // Sandbox Evernote service
     NSString *EVERNOTE_HOST = BootstrapServerBaseURLStringSandbox;
     
-    // Fill in the consumer key and secret with the values that you received from Evernote
-    // To get an API key, visit http://dev.evernote.com/documentation/cloud/
+    // Production Evernote service
+//    NSString *EVERNOTE_HOST = BootstrapServerBaseURLStringUS;
+    
+    // Evernote session info...
     NSString *CONSUMER_KEY = @"derrill-farley";
     NSString *CONSUMER_SECRET = @"c9a576fcd647e92a";
     
@@ -52,10 +48,27 @@
     [formatter setDateFormat:@"HH:mm:ss"];
     
     NSString *stringFromDate = [formatter stringFromDate:currentTime];
+    NSWindow *myWindow = [self window];
+    NSButton *button = (NSButton *)[[self contactsToolbarButton] view];
     
-    //    [self updateTimerLabel: stringFromDate ];
     NSLog(@"awakeFromNib: %@", stringFromDate);
+    NSLog(@"awakeFromNib: window=%@", myWindow);
+    NSLog(@"awakeFromNib: contactsToolbarButton=%@", button);
     
+//    NSString* imageName = [[NSBundle mainBundle] pathForResource:@"contacts-icon32" ofType:@"png"];
+//    NSImage* imageObj = [[NSImage alloc] initWithContentsOfFile:imageName];
+//    
+//    NSButton *newButton = [[NSButton alloc]init];
+////    [button setImage:[NSImage imageNamed:@"contacts-icon32"]];
+//    [button setImage:imageObj];
+//    [button setAlternateImage:[NSImage imageNamed:@"contacts-icon32"]];
+//    [button setImagePosition:NSImageOnly];
+//    [button setBordered:NO];
+//    
+//    [self.contactsToolbarButton setView:newButton];
+//    
+//    button = (NSButton *)[[self contactsToolbarButton] view];
+//    NSLog(@"awakeFromNib: contactsToolbarButton=%@", button);
 }
 
 - (IBAction)doAuthenticate:(id)sender {
@@ -82,9 +95,16 @@
 - (IBAction)contactsToolbarItemPressed:(id)sender {
     NSLog(@"Showing contacts popover");
     
-    NSButton *button = (NSButton *)[self.contactsToolbarButton view];
+    NSButton *button = (NSButton *)[[self contactsToolbarButton] view];
     NSLog(@"Showing contacts popover with view: %@", button);
-    [self.contactsButtonPopover showPopup:button];
+    
+    if (!contactsButtonPopover) {
+        //[[SomeObject alloc] init];
+        contactsButtonPopover = [[ContactsPopover alloc] initWithNibName:@"ContactsPopover" bundle:Nil];
+//        [self setContactsButtonPopover: po];
+    }
+    
+    [contactsButtonPopover showPopup:button];
 }
 
 @end

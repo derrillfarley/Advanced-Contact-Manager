@@ -9,14 +9,15 @@
 #import <Cocoa/Cocoa.h>
 #import "ContactsPopover.h"
 
-@interface TCCAppDelegate : NSObject <NSApplicationDelegate>
+@interface TCCAppDelegate : NSObject <NSApplicationDelegate> {
+    ContactsPopover *contactsButtonPopover;
+
+}
 
 @property (assign) IBOutlet NSToolbarItem *contactsToolbarButton;
-@property (assign) ContactsPopover *contactsButtonPopover;
+//@property (assign) ContactsPopover *contactsButtonPopover;
 @property (assign) IBOutlet NSWindow *window;
 @property (strong, nonatomic) NSArray *content;
-//@property (assign) IBOutlet NSToolbarItem *contactsToolbarButton;
-@property (assign) IBOutlet NSWindow *popoverWindow;
 
 - (IBAction)contactsToolbarItemPressed:(id)sender;
 
